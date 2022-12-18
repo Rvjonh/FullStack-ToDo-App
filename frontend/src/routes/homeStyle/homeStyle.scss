@@ -1,0 +1,52 @@
+
+
+.container-image-home{
+    position: relative;
+}
+
+.container-images{
+    @media screen and (min-width:80em) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.image-home-1{
+    position: absolute;
+    display: none;
+    @media screen and (min-width:500px) {
+        display: block;
+        left: 0;
+        top: 50%;
+    }
+
+    @media screen and (min-width:990px) {
+        display: block;
+        left: 15%;
+    }
+
+    @media screen and (min-width:80em) {
+        display: block;
+        position: relative;
+    }
+}
+.image-home-3{
+    position: absolute;
+    display: none;
+    @media screen and (min-width:500px) {
+        display: block;
+        right: 0;
+        top: 50%;
+    }
+
+    @media screen and (min-width:990px) {
+        display: block;
+        right: 25%;
+    }
+
+    @media screen and (min-width:80em) {
+        display: block;
+        position: relative;
+    }
+}
