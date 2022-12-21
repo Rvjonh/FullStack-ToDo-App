@@ -23,8 +23,7 @@ from api import send_email
 from api.models import LoginCode
 import threading
 
-import environ
-env = environ.Env()
+import os
 
 class TodoListCreate(generics.ListCreateAPIView):
     #ListApyView requires two mandatory attributes serializers_class and queryset
@@ -170,13 +169,13 @@ def login_email(request, email):
         try:
             msg=f"""
                     If you want to log in click in the link\n
-                    {env("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/
+                    {os.getenv("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/
                  """
             html = f"""
                 <h4>If you want to log in click in the link</h4>
-                <a href='{env("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/' >Log in</a>
+                <a href='{os.getenv("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/' >Log in</a>
                 <p>or</p>
-                <p>{env("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/</p>
+                <p>{os.getenv("URL_FRONTEND")}/{str(userAkser)}/{loginCode.code}/</p>
             """
             send_email.send_mail(from_email="To-Do app", subject='Login with Email', to_emails=[email,], text=msg, html=html)
 

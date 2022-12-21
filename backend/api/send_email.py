@@ -1,12 +1,10 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-import environ
+import os
 
-env = environ.Env()
-
-username = env("EMAIL_SMTP")
-password = env("EMAIL_PASSWORD")
+username = os.getenv("EMAIL_SMTP")
+password = os.getenv("EMAIL_PASSWORD")
 
 def send_mail(html=None, text='Email_body',subject='Hello word',from_email='',to_emails=[]):
     assert isinstance(to_emails,list)
