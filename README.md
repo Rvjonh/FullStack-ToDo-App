@@ -8,7 +8,7 @@ This is a proyect created to practice React, using my own API created with Pytho
 
 Check it out, it's hosted in a free server so, it will problably be slow, don't worry if it takes too much time:
 
-**Link:**
+**Link:** [FullStack React Django App](https://rvjonh-todo-app.netlify.app/)
 
 You can deploy it in your on computer (check development)
 
