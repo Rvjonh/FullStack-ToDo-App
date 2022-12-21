@@ -70,7 +70,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ORIGIN_WHITELIST = [
-     os.getenv("URL_FRONTEND"),
+    os.getenv("URL_FRONTEND"),
 ]
 
 ROOT_URLCONF = 'backend.urls'
