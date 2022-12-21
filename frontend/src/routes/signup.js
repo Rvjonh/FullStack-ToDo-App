@@ -191,7 +191,7 @@ export default function SignUp(){
                     (<span><NoAcceptedInput message={MessageError}/> &#9757;</span>)
                 }
                 
-                {signUpProcess.type !== "success" && <Stack>
+                {signUpProcess.type === "success" && <Stack>
                         <AcceptedInput message="You can log in now  &#127773;" />
                         
                         <Button variant='primary' onClick={handleSuccessRegister} tabIndex="0">
