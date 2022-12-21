@@ -2,11 +2,12 @@
 
 ## Todo list uses
 
-This is a proyect created to practice React, using my own API created with Python (Django).
+This is a proyect created to practice React, using my own API created with Python (Django). in this branch 'render_deploy',
+you will find the configuration to deploy the backend in [Render](https://render.com/) a PaaS to deploy django apps, and deploy the app to netlify with react.
 
 ## Live demo
 
-Check it out, it's hosted in a free server so, it will problably be slow, don't worry if it takes too much time:
+Check it out, it's hosted in a free server so, it will problably be slow, don't worry if it takes too much time: [FullStack React Django App](https://rvjonh-todo-app.netlify.app/)
 
 **Link:**
 
