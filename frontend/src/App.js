@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { createContext } from 'react';
 import { useContext } from 'react';
-import { Routes, Route, BrowserRouter} from 'react-router-dom';
+import { Routes, Route, HashRouter} from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -90,7 +90,7 @@ export default function App(){
 
     return(
         <GlobalState.Provider value={{user, isUserActive, updateUserData, loadUserData, token, error, login, logout, signup, setError, signUpProcess, setSignUpProcess, deleteTodo, updateCompleteTodo, notification, setNotification}}>
-            <BrowserRouter>
+            <HashRouter>
                 <Routes>
                     <Route path="/" element={<Layout/>} >
                         <Route index element={<Home />} />
@@ -113,7 +113,7 @@ export default function App(){
 
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </GlobalState.Provider>
     )
 }
